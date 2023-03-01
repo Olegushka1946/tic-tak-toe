@@ -23,7 +23,7 @@ def Wins(maps):
 
 # игра
 def game():
-    print ("Игра начинается, если захотите прекратить игру нажми на цифру 0 ")
+    print ("Игра начинается ")
     First_player = input("Первый игрок, представьтесь:  ")
     Second_player = input("Второй игрок, представьтесь: ")
     map_board()
@@ -33,8 +33,6 @@ def game():
             try: 
                 move = int((input(f"{First_player}, Ваш ход ___ ")))
                 player_move (move, "X")
-                if move == 0:
-                    break
             except ValueError:
                 print("Поле уже занято или Вы выбрали не цифру от 1 до 9 \n Выберите другое поле или цифру от 1 до 9")
                 map_board()
